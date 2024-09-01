@@ -1,0 +1,50 @@
+
+<link rel="stylesheet" href="randnum game.css">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 😁✔FUNNY GAME✔😁</title>
+</head>
+<body>
+    
+
+<div class="whole">
+
+<h1 id="title">GUESS THE NUMBER from 1 to 10</h1>
+<input  id="inp">
+<br>
+<button id="but" onclick="change()">click</button>
+<b><h2 id="result">You are Right/Wrong</h2></b>
+<b><h3 id="scorevalue">Your Score: <span id="scoreDisplay">10</span></h3></b>
+</div>
+
+
+
+<script>
+var input = document.getElementById("inp");
+var result = document.getElementById("result");
+var randnum = Math.floor(Math.random() * 10) + 1;
+var scoreDisplay = document.getElementById("scoreDisplay");
+var score = 10;
+
+function change() {
+  var enteredNumber = parseInt(input.value); // Corrected how the input value is accessed
+  if (randnum === enteredNumber) {
+    console.log("Right");
+    result.textContent = "Right";
+    alert("🥳😎YOU WON..!!!😎🥳");
+  } else {
+    score -= 1;
+    scoreDisplay.textContent = score;
+    result.textContent = "Wrong🙄";
+  }
+}
+
+</script>
+
+
+</body>
+</html>
